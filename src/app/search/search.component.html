@@ -1,0 +1,6 @@
+<input class="form-control" type="text" [(ngModel)]="search" />
+<ul *ngIf="elements" class="mb-20 list-primary">
+  <li *ngFor="let user of elements | filter: search; let i = index">
+    {{ user }}
+  </li>
+</ul>
