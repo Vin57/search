@@ -1,6 +1,6 @@
-<input class="form-control" type="text" [(ngModel)]="search" />
+<input class="form-control" type="text" [(ngModel)]="search" placeholder="Rechercher..." />
 <ul *ngIf="elements" class="mb-20 list-primary">
-  <li *ngFor="let user of elements | filter: search; let i = index">
-    {{ user }}
+  <li *ngFor="let element of elements | filter: search; let i = index">
+    {{ element.toString() }}
   </li>
 </ul>

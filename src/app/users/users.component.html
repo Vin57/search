@@ -1,2 +1,9 @@
-<button type="button" (click)="addUser()">Add user</button>
-<app-search [elements]="users$ | async"></app-search>
+<a [routerLink]="['new']">Add user</a>
+<ul *ngIf="users" class="mb-20 list-primary">
+  <li *ngFor="let user of users">
+    {{ user.name }}
+    <button type="button" [routerLink]="[user._id, 'edit']">Edit</button>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>

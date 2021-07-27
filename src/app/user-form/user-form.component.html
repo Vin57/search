@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <input formControlName="_id" type="hidden" />
+  <div>
+    <label for="">Name</label>
+    <input formControlName="name" type="text" />
+  </div>
+  <div>
+    <label for="">Age</label>
+    <input formControlName="age" type="number" />
+  </div>
+  <button type="submit" (click)="submit()">Valider</button>
+  <div *ngIf="user">
+    <button type="button" (click)="delete()">Supprimer</button>
+  </div>
+</form>
